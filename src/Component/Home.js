@@ -7,7 +7,7 @@ function Home() {
         flex={1}
         ai={"center"}
         style={{
-          backgroundImage: "url(/images/homebg.jpg)",
+          backgroundImage: "url(images/homebg.jpg)",
           textAlign: "center",
         }}
       >

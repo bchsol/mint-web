@@ -24,7 +24,7 @@ function Profile() {
     setNfts(_nfts);
   };
 
-  const connectWallet = async () => {
+  const connectKaikas = async () => {
     if (myAddress === "") {
       const address = await window.klaytn.enable();
       window.sessionStorage.setItem("address", address);
@@ -53,7 +53,7 @@ function Profile() {
         }}
       >
         <h1>My NFT</h1>
-        <Button variant="outline-dark" onClick={() => connectWallet()}>
+        <Button variant="outline-dark" onClick={() => connectKaikas()}>
           <span>{connectButton}</span>
         </Button>
         <h3>Balance : {myBalance} KLAY</h3>

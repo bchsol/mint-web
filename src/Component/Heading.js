@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 function Heading() {
+  const isLogin = window.sessionStorage.getItem("isLogin") || false;
+
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -34,7 +36,7 @@ function Heading() {
                 mint
               </Link>
               <Link
-                to="/profile"
+                to={isLogin ? "/profile" : "/login"}
                 style={{
                   color: "black",
                   textDecoration: "none",
